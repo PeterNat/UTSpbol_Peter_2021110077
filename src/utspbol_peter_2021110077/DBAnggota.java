@@ -104,7 +104,7 @@ public boolean update() {
         Koneksi con = new Koneksi();
         try {            
             con.bukaKoneksi();
-            con.preparedStatement = con.dbKoneksi.prepareStatement("update anggota set nama = ?, alamat = ?, telepon= ?,idanggota=?  where  idanggota = ? ");
+            con.preparedStatement = con.dbKoneksi.prepareStatement("update anggota set nama = ?, alamat = ?, telepon= ?  where  idanggota = ? ");
             con.preparedStatement.setString(1, getAnggotaModel().getNama());
             con.preparedStatement.setString(2, getAnggotaModel().getAlamat());
             con.preparedStatement.setDouble(3, getAnggotaModel().getTelepon());

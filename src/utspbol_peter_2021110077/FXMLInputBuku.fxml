@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="406.0" prefWidth="327.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utspbol_peter_2021110077.FXMLInputBukuController">
+   <children>
+      <Label layoutX="50.0" layoutY="81.0" text="ID Buku" />
+      <Label layoutX="50.0" layoutY="126.0" text="Judul" />
+      <Label layoutX="50.0" layoutY="169.0" text="kategori" />
+      <TextField fx:id="txtid" layoutX="152.0" layoutY="77.0" />
+      <TextField fx:id="txtjudul" layoutX="152.0" layoutY="122.0" />
+      <TextField fx:id="txtkategori" layoutX="152.0" layoutY="165.0" />
+      <Label layoutX="50.0" layoutY="208.0" text="Pengarang" />
+      <TextField fx:id="txtpengarang" layoutX="152.0" layoutY="204.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="57.0" layoutY="34.0" text="Tambah / Edit Data Buku">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="249.0" text="Penerbit" />
+      <TextField fx:id="txtpenerbit" layoutX="152.0" layoutY="245.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="50.0" layoutY="290.0" text="Tahun" />
+      <TextField fx:id="txttahun" layoutX="152.0" layoutY="286.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button fx:id="btnsimpan" layoutX="50.0" layoutY="342.0" mnemonicParsing="false" onAction="#simpanklik" text="Save">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnbatal" layoutX="121.0" layoutY="342.0" mnemonicParsing="false" onAction="#batalklik" text="Batal">
+         <graphic>
+            <ImageView fitHeight="14.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../trash-bin.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnquit" layoutX="241.0" layoutY="342.0" mnemonicParsing="false" onAction="#quitklik" text="Exit">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

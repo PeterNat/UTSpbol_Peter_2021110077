@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="381.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utspbol_peter_2021110077.FXMLDataBukuController">
+   <children>
+      <ImageView fitHeight="452.0" fitWidth="689.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bg.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="46.0" layoutY="41.0" text="Data Buku" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbvbuku" layoutX="46.0" layoutY="87.0" prefHeight="197.0" prefWidth="521.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <Label layoutX="469.0" layoutY="31.0" prefHeight="25.0" prefWidth="68.0" text="Cari Data:" textFill="WHITE">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchbuku" layoutX="469.0" layoutY="53.0" onKeyReleased="#cariData" prefHeight="25.0" prefWidth="98.0" />
+      <Button fx:id="btnsesudah" layoutX="596.0" layoutY="196.0" mnemonicParsing="false" onAction="#sesudahklik" rotate="90.0" text="&gt;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnsebelum" layoutX="594.0" layoutY="137.0" mnemonicParsing="false" onAction="#sebelumklik" prefHeight="25.0" prefWidth="40.0" text="^">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btntambah" layoutX="46.0" layoutY="307.0" mnemonicParsing="false" onAction="#tambahklik" prefHeight="25.0" prefWidth="68.0" text="Add">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnupdate" layoutX="220.0" layoutY="308.0" mnemonicParsing="false" onAction="#updateklik" prefHeight="17.0" prefWidth="79.0" text="Edit">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../edit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnhapus" layoutX="128.0" layoutY="307.0" mnemonicParsing="false" onAction="#hapusklik" prefHeight="28.0" prefWidth="79.0" text="Delete">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../trash-bin.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnquit" layoutX="499.0" layoutY="308.0" mnemonicParsing="false" onAction="#quitklik" prefHeight="28.0" prefWidth="68.0" text="Exit">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="235.0" layoutY="409.0" text="Peter Natanael - 2021110077" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

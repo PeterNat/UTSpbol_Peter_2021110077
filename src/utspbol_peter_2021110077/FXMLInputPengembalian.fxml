@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utspbol_peter_2021110077.FXMLInputPengembalianController">
+   <children>
+      <TextField fx:id="txtidanggota" editable="false" layoutX="440.0" layoutY="156.0" prefHeight="25.0" prefWidth="144.0" promptText="A001" />
+      <TextField fx:id="txttglkembalibuku" layoutX="440.0" layoutY="121.0" prefHeight="25.0" prefWidth="144.0" promptText="dd-mm-yyyy" />
+      <Label layoutX="42.0" layoutY="273.0" text="Tabel Peminjaman">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="323.0" layoutY="160.0" text="ID Anggota" />
+      <Label layoutX="323.0" layoutY="116.0" text="Tanggal Kembali&#10;Buku" />
+      <TextField fx:id="txtjudul" editable="false" layoutX="440.0" layoutY="85.0" prefHeight="25.0" prefWidth="144.0" promptText="&quot;Kancil&quot;" />
+      <Label layoutX="323.0" layoutY="88.0" text="Judul" />
+      <Label layoutX="41.0" layoutY="36.0" text="Input Pengembalian">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbvpinjam" layoutX="36.0" layoutY="348.0" onMouseClicked="#setdata" prefHeight="175.0" prefWidth="551.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <Label layoutX="489.0" layoutY="290.0" prefHeight="25.0" prefWidth="68.0" text="Cari Data:">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchpinjam" layoutX="489.0" layoutY="312.0" onKeyReleased="#cariDataPinjam" prefHeight="25.0" prefWidth="98.0" promptText="P001" />
+      <Label layoutX="55.0" layoutY="87.0" text="ID Kembali" />
+      <Label layoutX="54.0" layoutY="124.0" text="ID Pinjam" />
+      <Label layoutX="54.0" layoutY="159.0" text="ID Buku" />
+      <TextField fx:id="txtidkembali" layoutX="134.0" layoutY="83.0" prefHeight="25.0" prefWidth="144.0" promptText="K001" />
+      <TextField fx:id="txtidpinjam" editable="false" layoutX="133.0" layoutY="120.0" prefHeight="25.0" prefWidth="144.0" promptText="P001" />
+      <TextField fx:id="txtidbuku" editable="false" layoutX="133.0" layoutY="155.0" prefHeight="25.0" prefWidth="144.0" promptText="B001" />
+      <Button fx:id="btnquit" layoutX="528.0" layoutY="204.0" mnemonicParsing="false" onAction="#quitklik" text="Exit">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnbatal" layoutX="124.0" layoutY="210.0" mnemonicParsing="false" onAction="#batalklik" text="Batal">
+         <graphic>
+            <ImageView fitHeight="14.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../trash-bin.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnsimpan" layoutX="53.0" layoutY="210.0" mnemonicParsing="false" onAction="#simpanklik" text="Save">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

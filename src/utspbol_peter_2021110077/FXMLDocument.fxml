@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utspbol_peter_2021110077.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="502.0" fitWidth="791.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bg.png" />
+         </image>
+      </ImageView>
+      <MenuBar prefHeight="29.0" prefWidth="751.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Input">
+               <items>
+                  <MenuItem fx:id="inputanggota" mnemonicParsing="false" onAction="#inputaggklik" text="Anggota" />
+                  <MenuItem fx:id="inputbuku" mnemonicParsing="false" onAction="#inputbukuklik" text="Buku" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Data">
+               <items>
+                  <MenuItem fx:id="displayagg" mnemonicParsing="false" onAction="#displayaggklik" text="Anggota" />
+                  <MenuItem fx:id="displaybuku" mnemonicParsing="false" onAction="#displaybukuklik" text="Buku" />
+                  <MenuItem fx:id="displaypinjam" mnemonicParsing="false" onAction="#displaypinjamklik" text="Data Peminjaman" />
+                  <MenuItem fx:id="displaykembali" mnemonicParsing="false" onAction="#displaykembaliklik" text="Data Pengembalian" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Transaksi">
+               <items>
+                  <MenuItem fx:id="inputpinjam" mnemonicParsing="false" onAction="#inputpinjamklik" text="Peminjaman Buku" />
+                  <MenuItem fx:id="inputkembali" mnemonicParsing="false" onAction="#inputkembaliklik" text="Pengembalian Buku" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="14.0" layoutY="71.0" text="Welcome," textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="55.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="172.0" text="Perpustakaan ABC" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="55.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="250.0" text="Perpustakaan terlengkap dan terbesar di Bandung, yang&#10;menyediakan buku-buku dari berbagai penulis." textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="272.0" layoutY="458.0" text="Peter Natanael - 2021110077" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

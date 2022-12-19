@@ -8,8 +8,13 @@ package utspbol_peter_2021110077;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashMap;
+import java.util.Map;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -154,5 +159,19 @@ public ObservableList<BukuModel>  CariBuku(String kode, String judul) {
             e.printStackTrace();
             return null;
         }
+    }
+public void print(){
+        Koneksi con = new Koneksi(); 
+        String is = "./src/utspbol_peter_2021110077/ReportBuku.jasper";
+        Map map = new HashMap();
+        map.put("p_periode", "Desember");
+        con.bukaKoneksi();
+        try { 
+            JasperPrint jasperPrint =
+                JasperFillManager.fillReport(is, map,  con.dbKoneksi);
+            JasperViewer.viewReport(jasperPrint, false);
+        } 
+        catch (Exception ex) { ex.printStackTrace();  }   
+        con.tutupKoneksi();         
     }
 }

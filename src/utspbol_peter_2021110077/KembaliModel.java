@@ -4,12 +4,15 @@
  */
 package utspbol_peter_2021110077;
 
+import java.sql.Date;
+
 /**
  *
  * @author Penath
  */
 public class KembaliModel {
-    private String idkembali,idpinjam,tgl_kembalibuku,idanggota, idbuku,judul;
+    private String idkembali,idpinjam,idanggota, idbuku,judul;
+    Date tgl_kembalibuku;
 
     public String getIdkembali() {
         return idkembali;
@@ -50,11 +53,13 @@ public class KembaliModel {
         this.judul = judul;
     }
 
-    public String getTgl_kembalibuku() {
+    public Date getTgl_kembalibuku() {
         return tgl_kembalibuku;
     }
 
-    public void setTgl_kembalibuku(String tgl_kembalibuku) {
+    public void setTgl_kembalibuku(Date tgl_kembalibuku) {
         this.tgl_kembalibuku = tgl_kembalibuku;
     }
+    
 }
+

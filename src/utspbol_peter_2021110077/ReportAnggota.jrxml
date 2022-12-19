@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9db8e8b9-a827-4550-bff1-f8c74881cead">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT  * FROM anggota;]]>
+	</queryString>
+	<field name="idanggota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telepon" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="674d7b99-e1f7-47d5-98e5-43e8cb2cfb8c"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="da56155c-5ccb-4545-a2ae-22ab48cd5ea1"/>
+					<textElement>
+						<font fontName="DejaVu Sans" size="22" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Daftar Anggota]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="46f565b6-b28c-47a4-9a98-20f066358655"/>
+					<textElement textAlignment="Right">
+						<font fontName="DejaVu Sans" size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Perpustakaan ABC]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="63e9ea77-17c9-421a-8c4c-23468a5fe743"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="7d9467fd-edf0-4f3a-94f8-5ce9fc32c6eb"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[idanggota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="138" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="022266b3-abfd-4c87-a730-30312d9c1085"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="276" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="35e59a63-1258-4318-99ef-9ad46005c5de"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="414" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="af3a79c4-256a-4f6a-950b-645a610f9973"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[telepon]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="b0e6fbe3-0f6f-4714-aed8-b6d0b45ed1fd"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="138" height="20" uuid="b2ae8a24-a6ab-4325-bda2-271c2de04f2a"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idanggota}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="138" y="0" width="138" height="20" uuid="ee0189a2-7015-4f93-9b67-b14901f8e888"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="276" y="0" width="138" height="20" uuid="b70eb2cd-ca0a-403e-af3c-48a12f1e1122"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="414" y="0" width="138" height="20" uuid="6c919d49-b84b-4ed7-8298-3a9f9adaabdf"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telepon}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="6adf1db9-91e8-4ea1-8a43-f2b659b9e17b"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="89206855-19ea-4f0c-b9a6-38cda6b64077"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="c95c8274-ecef-4b39-a675-ba1a63b6ea02"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

@@ -5,6 +5,7 @@
 package utspbol_peter_2021110077;
 
 import java.net.URL;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
@@ -45,9 +46,7 @@ boolean editdata=false;
     private TableView<BukuModel> tbvbuku;
     @FXML
     private TextField txtjudul;
-    @FXML
     private TextField txttglpinjam;
-    @FXML
     private TextField txttglkembali;
     @FXML
     private Button btnquit;
@@ -55,6 +54,10 @@ boolean editdata=false;
     private Button btnbatal;
     @FXML
     private Button btnsimpan;
+    @FXML
+    private DatePicker datepinjam;
+    @FXML
+    private DatePicker datekembali;
 
     /**
      * Initializes the controller class.
@@ -74,8 +77,8 @@ boolean editdata=false;
           txtidanggota.setText(d.getIdanggota());
           txtidbuku.setText(d.getIdbuku());
           txtjudul.setText(d.getJudul());          
-          txttglpinjam.setText(d.getTgl_pinjam());          
-          txttglkembali.setText(d.getTgl_kembali());          
+//          datepinjam.getDate(Date.valueOf(datepinjam.getValue()));          
+//          txttglkembali.setText(d.getTgl_kembali());          
           txtidpinjam.setEditable(false);
           txtidpinjam.requestFocus();         
           
@@ -176,7 +179,7 @@ public void showdataanggota(){
         }else {
             Alert a=new Alert(Alert.AlertType.ERROR,"Data kosong",ButtonType.OK);
             a.showAndWait();
-            tbvanggota.getScene().getWindow().hide();;
+            tbvanggota.getScene().getWindow().hide();
         }            
             } else{
                showdataanggota();
@@ -234,8 +237,8 @@ public void showdataanggota(){
         txtidanggota.setText("");
         txtidbuku.setText("");
         txtjudul.setText("");       
-        txttglpinjam.setText("");       
-        txttglkembali.setText("");    
+        datepinjam.getEditor().clear();       
+        datekembali.getEditor().clear();    
         txtidpinjam.requestFocus();
     }
 
@@ -246,8 +249,8 @@ public void showdataanggota(){
         n.setIdanggota(txtidanggota.getText());
         n.setIdbuku(txtidbuku.getText());
         n.setJudul(txtjudul.getText());     
-        n.setTgl_pinjam(txttglpinjam.getText());  
-        n.setTgl_kembali(txttglkembali.getText());  
+        n.setTgl_pinjam(Date.valueOf(datepinjam.getValue()));  
+        n.setTgl_kembali(Date.valueOf(datekembali.getValue())); 
         
         FXMLDocumentController.dtpinjam.setPinjamModel(n);
         if(editdata){

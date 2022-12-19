@@ -38,6 +38,14 @@
                   <MenuItem fx:id="inputkembali" mnemonicParsing="false" onAction="#inputkembaliklik" text="Pengembalian Buku" />
                </items>
             </Menu>
+            <Menu mnemonicParsing="false" text="Laporan">
+              <items>
+                  <MenuItem fx:id="lapAnggota" mnemonicParsing="false" onAction="#lapAnggotaklik" text="Laporan Anggota" />
+                  <MenuItem fx:id="lapBuku" mnemonicParsing="false" onAction="#lapBukuklik" text="Laporan Daftar Buku" />
+                <MenuItem fx:id="lapPeminjaman" mnemonicParsing="false" onAction="#lapPeminjamanklik" text="Laporan Peminjaman" />
+                  <MenuItem fx:id="lapPengembalian" mnemonicParsing="false" onAction="#lapPengembalianklik" text="Laporan Pengembalian" />
+              </items>
+            </Menu>
             <Menu mnemonicParsing="false" text="Help">
                <items>
                   <MenuItem mnemonicParsing="false" text="About" />

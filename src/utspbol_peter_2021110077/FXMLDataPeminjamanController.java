@@ -78,7 +78,7 @@ public void showdata(){
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("judul"));
             tbvpinjam.getColumns().addAll(col);
             col=new TableColumn("tgl_pinjam");
-            col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("tgl_pinjam"));
+            col.setCellValueFactory(new FormattedDateValueFactory<BukuModel>("tgl_pinjam", "dd-MMM-yyyy"));
             tbvpinjam.getColumns().addAll(col);
             col=new TableColumn("tgl_kembali");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("tgl_kembali"));
@@ -112,17 +112,17 @@ public void showdata(){
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("judul"));
             tbvpinjam.getColumns().addAll(col);
             col=new TableColumn("tgl_pinjam");
-            col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("tgl_pinjam"));
+            col.setCellValueFactory(new FormattedDateValueFactory<BukuModel>("tgl_pinjam", "dd-MMM-yyyy"));
             tbvpinjam.getColumns().addAll(col);
             col=new TableColumn("tgl_kembali");
-            col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("tgl_kembali"));
+            col.setCellValueFactory(new FormattedDateValueFactory<BukuModel>("tgl_kembali", "dd-MMM-yyyy"));
             tbvpinjam.getColumns().addAll(col);    
             
             tbvpinjam.setItems(data);
         }else {
             Alert a=new Alert(Alert.AlertType.ERROR,"Data kosong",ButtonType.OK);
             a.showAndWait();
-            tbvpinjam.getScene().getWindow().hide();;
+            tbvpinjam.getScene().getWindow().hide();
         }            
             } else{
                showdata();

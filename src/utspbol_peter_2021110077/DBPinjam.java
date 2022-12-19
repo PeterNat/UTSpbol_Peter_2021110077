@@ -7,9 +7,13 @@ package utspbol_peter_2021110077;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashMap;
+import java.util.Map;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 /**
  *
  * @author Penath
@@ -33,8 +37,8 @@ public class DBPinjam {
                 d.setIdanggota(rs.getString("idanggota"));            
                 d.setIdbuku(rs.getString("idbuku"));            
                 d.setJudul(rs.getString("judul"));            
-                d.setTgl_pinjam(rs.getString("tgl_pinjam"));            
-                d.setTgl_kembali(rs.getString("tgl_kembali"));               
+                d.setTgl_pinjam(rs.getDate("tgl_pinjam"));            
+                d.setTgl_kembali(rs.getDate("tgl_kembali"));               
                 tableData.add(d);                
                 i++;            
             }
@@ -73,8 +77,8 @@ public class DBPinjam {
             con.preparedStatement.setString(2, getPinjamModel().getIdanggota());
             con.preparedStatement.setString(3, getPinjamModel().getIdbuku());           
             con.preparedStatement.setString(4, getPinjamModel().getJudul());        
-            con.preparedStatement.setString(5, getPinjamModel().getTgl_pinjam());        
-            con.preparedStatement.setString(6, getPinjamModel().getTgl_kembali());        
+            con.preparedStatement.setDate(5, getPinjamModel().getTgl_pinjam());        
+            con.preparedStatement.setDate(6, getPinjamModel().getTgl_kembali());        
             con.preparedStatement.executeUpdate();
             berhasil = true;
         } catch (Exception e) {            
@@ -110,8 +114,8 @@ public boolean update() {
         try {            
             con.bukaKoneksi();
             con.preparedStatement = con.dbKoneksi.prepareStatement("update peminjaman set tgl_kembali= ?,tgl_pinjam= ? , judul= ?,idbuku= ? ,idanggota= ?   where  idpinjam= ? ");
-            con.preparedStatement.setString(1, getPinjamModel().getTgl_kembali());         
-            con.preparedStatement.setString(2, getPinjamModel().getTgl_pinjam());        
+            con.preparedStatement.setDate(1, getPinjamModel().getTgl_kembali());         
+            con.preparedStatement.setDate(2, getPinjamModel().getTgl_pinjam());        
             con.preparedStatement.setString(3, getPinjamModel().getJudul());        
             con.preparedStatement.setString(4, getPinjamModel().getIdbuku());           
             con.preparedStatement.setString(5, getPinjamModel().getIdanggota());
@@ -142,8 +146,8 @@ public ObservableList<PinjamModel>  CariPinjam(String kode, String idanggota) {
             d.setIdanggota(rs.getString("idanggota"));
             d.setIdbuku(rs.getString("idbuku"));
             d.setJudul(rs.getString("judul"));
-            d.setTgl_pinjam(rs.getString("tgl_pinjam"));
-            d.setTgl_kembali(rs.getString("tgl_kembali"));
+            d.setTgl_pinjam(rs.getDate("tgl_pinjam"));
+            d.setTgl_kembali(rs.getDate("tgl_kembali"));
             
             tableData.add(d);
             i++;
@@ -154,5 +158,19 @@ public ObservableList<PinjamModel>  CariPinjam(String kode, String idanggota) {
             e.printStackTrace();
             return null;
         }
+    }
+public void print(){
+        Koneksi con = new Koneksi(); 
+        String is = "./src/utspbol_peter_2021110077/ReportPeminjaman.jasper";
+        Map map = new HashMap();
+        map.put("p_periode", "Desember");
+        con.bukaKoneksi();
+        try { 
+            JasperPrint jasperPrint =
+                JasperFillManager.fillReport(is, map,  con.dbKoneksi);
+            JasperViewer.viewReport(jasperPrint, false);
+        } 
+        catch (Exception ex) { ex.printStackTrace();  }   
+        con.tutupKoneksi();         
     }
 }

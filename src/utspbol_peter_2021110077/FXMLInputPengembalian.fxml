@@ -11,7 +11,6 @@
 <AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utspbol_peter_2021110077.FXMLInputPengembalianController">
    <children>
       <TextField fx:id="txtidanggota" editable="false" layoutX="440.0" layoutY="156.0" prefHeight="25.0" prefWidth="144.0" promptText="A001" />
-      <TextField fx:id="txttglkembalibuku" layoutX="440.0" layoutY="121.0" prefHeight="25.0" prefWidth="144.0" promptText="dd-mm-yyyy" />
       <Label layoutX="42.0" layoutY="273.0" text="Tabel Peminjaman">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -70,5 +69,6 @@
             </ImageView>
          </graphic>
       </Button>
+      <DatePicker fx:id="txttglkembalibuku" layoutX="441.0" layoutY="120.0" prefHeight="25.0" prefWidth="144.0" />
    </children>
 </AnchorPane>

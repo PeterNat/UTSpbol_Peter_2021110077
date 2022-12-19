@@ -7,8 +7,13 @@ package utspbol_peter_2021110077;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashMap;
+import java.util.Map;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -30,8 +35,8 @@ public class DBKembali {
             while (rs.next()) {
                 KembaliModel d=new KembaliModel();
                 d.setIdkembali(rs.getString("idkembali"));                
-                d.setIdpinjam(rs.getString("idpinjam"));                
-                d.setTgl_kembalibuku(rs.getString("tgl_kembalibuku"));                  
+                d.setIdpinjam(rs.getString("idpinjam"));                    
+                d.setTgl_kembalibuku(rs.getDate("tgl_kembalibuku"));    
                 d.setIdbuku(rs.getString("idbuku"));            
                 d.setJudul(rs.getString("judul"));            
                 d.setIdanggota(rs.getString("idanggota"));            
@@ -70,8 +75,8 @@ public class DBKembali {
             con.bukaKoneksi();
             con.preparedStatement = con.dbKoneksi.prepareStatement("insert into pengembalian (idkembali,idpinjam, tgl_kembalibuku,idbuku,judul,idanggota) values (?,?,?,?,?,?)");
             con.preparedStatement.setString(1, getKembaliModel().getIdkembali());           
-            con.preparedStatement.setString(2, getKembaliModel().getIdpinjam());           
-            con.preparedStatement.setString(3, getKembaliModel().getTgl_kembalibuku());
+            con.preparedStatement.setString(2, getKembaliModel().getIdpinjam());     
+            con.preparedStatement.setDate(3, getKembaliModel().getTgl_kembalibuku());  
             con.preparedStatement.setString(4, getKembaliModel().getIdbuku());           
             con.preparedStatement.setString(5, getKembaliModel().getJudul());        
             con.preparedStatement.setString(6, getKembaliModel().getIdanggota());          
@@ -112,8 +117,8 @@ public boolean update() {
             con.preparedStatement = con.dbKoneksi.prepareStatement("update pengembalian set idanggota= ?,judul= ? , idbuku= ?,tgl_kembalibuku= ? ,idpinjam= ?   where  idkembali= ? ");
             con.preparedStatement.setString(1, getKembaliModel().getIdanggota());          
             con.preparedStatement.setString(2, getKembaliModel().getJudul());        
-            con.preparedStatement.setString(3, getKembaliModel().getIdbuku());           
-            con.preparedStatement.setString(4, getKembaliModel().getTgl_kembalibuku());           
+            con.preparedStatement.setString(3, getKembaliModel().getIdbuku());            
+            con.preparedStatement.setDate(4, getKembaliModel().getTgl_kembalibuku()); 
             con.preparedStatement.setString(5, getKembaliModel().getIdpinjam());           
             con.preparedStatement.setString(6, getKembaliModel().getIdkembali());
             con.preparedStatement.executeUpdate();            
@@ -140,7 +145,7 @@ public ObservableList<KembaliModel>  CariKembali(String kode, String idpinjam) {
             KembaliModel d = new KembaliModel();
             d.setIdkembali(rs.getString("idkembali"));                
             d.setIdpinjam(rs.getString("idpinjam"));                
-            d.setTgl_kembalibuku(rs.getString("tgl_kembalibuku"));     
+            d.setTgl_kembalibuku(rs.getDate("tgl_kembalibuku"));
             d.setIdbuku(rs.getString("idbuku"));            
             d.setJudul(rs.getString("judul"));            
             d.setIdanggota(rs.getString("idanggota"));            
@@ -170,8 +175,8 @@ public ObservableList<PinjamModel>  CariPinjam(String kode, String idanggota) {
             d.setIdanggota(rs.getString("idanggota"));
             d.setIdbuku(rs.getString("idbuku"));
             d.setJudul(rs.getString("judul"));
-            d.setTgl_pinjam(rs.getString("tgl_pinjam"));
-            d.setTgl_kembali(rs.getString("tgl_kembali"));
+            d.setTgl_pinjam(rs.getDate("tgl_pinjam"));
+            d.setTgl_kembali(rs.getDate("tgl_kembali"));
             
             tableData.add(d);
             i++;
@@ -182,5 +187,19 @@ public ObservableList<PinjamModel>  CariPinjam(String kode, String idanggota) {
             e.printStackTrace();
             return null;
         }
+    }
+public void print(){
+        Koneksi con = new Koneksi(); 
+        String is = "./src/utspbol_peter_2021110077/ReportPengembalian.jasper";
+        Map map = new HashMap();
+        map.put("p_periode", "Desember");
+        con.bukaKoneksi();
+        try { 
+            JasperPrint jasperPrint =
+                JasperFillManager.fillReport(is, map,  con.dbKoneksi);
+            JasperViewer.viewReport(jasperPrint, false);
+        } 
+        catch (Exception ex) { ex.printStackTrace();  }   
+        con.tutupKoneksi();         
     }
 }

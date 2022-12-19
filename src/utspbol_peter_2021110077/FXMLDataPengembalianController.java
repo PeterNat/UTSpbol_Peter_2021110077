@@ -73,7 +73,7 @@ public void showdata(){
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("idpinjam"));
             tbvkembali.getColumns().addAll(col);
             col=new TableColumn("tgl_kembalibuku");
-            col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("tgl_kembalibuku"));
+            col.setCellValueFactory(new FormattedDateValueFactory<BukuModel>("tgl_kembalibuku", "dd-MMM-yyyy"));
             tbvkembali.getColumns().addAll(col);
             col=new TableColumn("idbuku");
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("idbuku"));
@@ -88,7 +88,7 @@ public void showdata(){
             tbvkembali.setItems(data);
     }else {  Alert a=new Alert(Alert.AlertType.ERROR,"Data kosong",ButtonType.OK);
             a.showAndWait();
-            tbvkembali.getScene().getWindow().hide();;
+            tbvkembali.getScene().getWindow().hide();
         }                
     }
     
@@ -183,7 +183,7 @@ public void showdata(){
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("idpinjam"));
             tbvkembali.getColumns().addAll(col);
             col=new TableColumn("tgl_kembalibuku");
-            col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("tgl_kembalibuku"));
+            col.setCellValueFactory(new FormattedDateValueFactory<BukuModel>("tgl_kembalibuku", "dd-MMM-yyyy"));
             tbvkembali.getColumns().addAll(col);
             col=new TableColumn("idbuku");
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("idbuku"));

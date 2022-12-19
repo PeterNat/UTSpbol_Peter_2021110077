@@ -4,6 +4,8 @@
  */
 package utspbol_peter_2021110077;
 
+import java.sql.Date;
+
 
 
 /**
@@ -12,7 +14,16 @@ package utspbol_peter_2021110077;
  */
 public class PinjamModel {
     private String idpinjam,idanggota, idbuku,judul;
-    private String tgl_pinjam,tgl_kembali;
+//    private String tgl_pinjam,tgl_kembali;
+    Date tgl_pinjam,tgl_kembali;
+
+    public Date getTgl_kembali() {
+        return tgl_kembali;
+    }
+
+    public void setTgl_kembali(Date tgl_kembali) {
+        this.tgl_kembali = tgl_kembali;
+    }
 
     public String getIdpinjam() {
         return idpinjam;
@@ -47,19 +58,27 @@ public class PinjamModel {
         this.judul = judul;
     }
 
-    public String getTgl_pinjam() {
+//    public String getTgl_pinjam() {
+//        return tgl_pinjam;
+//    }
+//
+//    public void setTgl_pinjam(String tgl_pinjam) {
+//        this.tgl_pinjam = tgl_pinjam;
+//    }
+//
+//    public String getTgl_kembali() {
+//        return tgl_kembali;
+//    }
+//
+//    public void setTgl_kembali(String tgl_kembali) {
+//        this.tgl_kembali = tgl_kembali;
+//    }
+
+    public Date getTgl_pinjam() {
         return tgl_pinjam;
     }
 
-    public void setTgl_pinjam(String tgl_pinjam) {
+    public void setTgl_pinjam(Date tgl_pinjam) {
         this.tgl_pinjam = tgl_pinjam;
-    }
-
-    public String getTgl_kembali() {
-        return tgl_kembali;
-    }
-
-    public void setTgl_kembali(String tgl_kembali) {
-        this.tgl_kembali = tgl_kembali;
     }
 }

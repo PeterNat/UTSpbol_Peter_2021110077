@@ -47,6 +47,14 @@ public class FXMLDocumentController implements Initializable {
     private MenuItem displaykembali;
     @FXML
     private MenuItem inputkembali;
+    @FXML
+    private MenuItem lapPeminjaman;
+    @FXML
+    private MenuItem lapAnggota;
+    @FXML
+    private MenuItem lapBuku;
+    @FXML
+    private MenuItem lapPengembalian;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -173,6 +181,31 @@ public class FXMLDocumentController implements Initializable {
             stg.setScene(scene);
             stg.show();        
         } catch (IOException e){   e.printStackTrace();   }    
+    }
+
+//    @FXML
+//    private void lapPeminjamanklik(ActionEvent event) {
+//        dtpinjam.print();   
+//    }
+
+    @FXML
+    private void lapAnggotaklik(ActionEvent event) {
+        dtanggota.print(); 
+    }
+
+    @FXML
+    private void lapPeminjamanklik(ActionEvent event) {
+        dtpinjam.print(); 
+    }
+
+    @FXML
+    private void lapBukuklik(ActionEvent event) {
+        dtbuku.print(); 
+    }
+
+    @FXML
+    private void lapPengembalianklik(ActionEvent event) {
+        dtkembali.print(); 
     }
     
 }

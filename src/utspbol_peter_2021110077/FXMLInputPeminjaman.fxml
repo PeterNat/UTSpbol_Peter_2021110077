@@ -16,13 +16,13 @@
       <Label layoutX="44.0" layoutY="149.0" text="ID Buku" />
       <Label layoutX="44.0" layoutY="114.0" text="ID Anggota" />
       <Label layoutX="45.0" layoutY="77.0" text="ID Pinjam" />
-      <TextField fx:id="searchanggota" layoutX="187.0" layoutY="332.0" onKeyReleased="#cariDataAnggota" prefHeight="25.0" prefWidth="98.0" promptText="A001" />
-      <Label layoutX="187.0" layoutY="310.0" prefHeight="25.0" prefWidth="68.0" text="Cari Data:">
+      <TextField fx:id="searchanggota" layoutX="476.0" layoutY="331.0" onKeyReleased="#cariDataAnggota" prefHeight="25.0" prefWidth="98.0" promptText="A001" />
+      <Label layoutX="476.0" layoutY="309.0" prefHeight="25.0" prefWidth="68.0" text="Cari Data:">
          <font>
             <Font size="9.0" />
          </font>
       </Label>
-      <TableView fx:id="tbvanggota" layoutX="24.0" layoutY="368.0" onMouseClicked="#setdata" prefHeight="131.0" prefWidth="263.0">
+      <TableView fx:id="tbvanggota" layoutX="313.0" layoutY="367.0" onMouseClicked="#setdata" prefHeight="131.0" prefWidth="263.0">
          <columns>
             <TableColumn prefWidth="75.0" text="C1" />
             <TableColumn prefWidth="75.0" text="C2" />
@@ -33,13 +33,13 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="476.0" layoutY="310.0" prefHeight="25.0" prefWidth="68.0" text="Cari Data:">
+      <Label layoutX="194.0" layoutY="309.0" prefHeight="25.0" prefWidth="68.0" text="Cari Data:">
          <font>
             <Font size="9.0" />
          </font>
       </Label>
-      <TextField fx:id="searchbuku" layoutX="476.0" layoutY="332.0" onKeyReleased="#cariDataBuku" prefHeight="25.0" prefWidth="98.0" promptText="B001" />
-      <TableView fx:id="tbvbuku" layoutX="313.0" layoutY="368.0" onMouseClicked="#setdata" prefHeight="131.0" prefWidth="263.0">
+      <TextField fx:id="searchbuku" layoutX="194.0" layoutY="331.0" onKeyReleased="#cariDataBuku" prefHeight="25.0" prefWidth="98.0" promptText="B001" />
+      <TableView fx:id="tbvbuku" layoutX="31.0" layoutY="367.0" onMouseClicked="#setdata" prefHeight="131.0" prefWidth="263.0">
          <columns>
             <TableColumn prefWidth="75.0" text="C1" />
             <TableColumn prefWidth="75.0" text="C2" />
@@ -49,11 +49,11 @@
       <TextField fx:id="txtjudul" editable="false" layoutX="430.0" layoutY="75.0" prefHeight="25.0" prefWidth="144.0" promptText="Kancil" />
       <Label layoutX="313.0" layoutY="115.0" text="Tanggal Pinjam" />
       <Label layoutX="313.0" layoutY="150.0" text="Tanggal Kembali" />
-      <Label layoutX="30.0" layoutY="293.0" text="Tabel Anggota">
+      <Label layoutX="319.0" layoutY="292.0" text="Tabel Anggota">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
-      <Label layoutX="313.0" layoutY="293.0" text="Tabel Buku">
+      <Label layoutX="31.0" layoutY="292.0" text="Tabel Buku">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>

@@ -60,8 +60,6 @@ boolean editdata=false;
     private DatePicker datepinjam;
     @FXML
     private DatePicker datekembali;
-    @FXML
-    private DatePicker datekembalibuku;
 
     /**
      * Initializes the controller class.

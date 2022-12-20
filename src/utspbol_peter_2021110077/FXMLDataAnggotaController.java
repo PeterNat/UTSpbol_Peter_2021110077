@@ -63,16 +63,16 @@ public class FXMLDataAnggotaController implements Initializable {
         if(data!=null){            
             tbvanggota.getColumns().clear();            
             tbvanggota.getItems().clear();
-            TableColumn col=new TableColumn("idanggota");
+            TableColumn col=new TableColumn("ID Anggota");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("idanggota"));
             tbvanggota.getColumns().addAll(col);
-            col=new TableColumn("nama");
+            col=new TableColumn("Nama");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("nama"));
             tbvanggota.getColumns().addAll(col);
-            col=new TableColumn("alamat");
+            col=new TableColumn("Alamat");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("alamat"));
             tbvanggota.getColumns().addAll(col);
-            col=new TableColumn("telepon");
+            col=new TableColumn("Telepon");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, Integer>("telepon"));
             tbvanggota.getColumns().addAll(col);
             
@@ -94,16 +94,16 @@ public class FXMLDataAnggotaController implements Initializable {
         if(data!=null){            
             tbvanggota.getColumns().clear();
             tbvanggota.getItems().clear();
-            TableColumn col=new TableColumn("id Anggota");
+            TableColumn col=new TableColumn("ID Anggota");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("idanggota"));
             tbvanggota.getColumns().addAll(col);
-            col=new TableColumn("nama");
+            col=new TableColumn("Nama");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("nama"));
             tbvanggota.getColumns().addAll(col);
-            col=new TableColumn("alamat");
+            col=new TableColumn("Alamat");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("alamat"));
             tbvanggota.getColumns().addAll(col);
-            col=new TableColumn("telepon");
+            col=new TableColumn("Telepon");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("telepon"));
             tbvanggota.getColumns().addAll(col);       
             
@@ -128,7 +128,7 @@ public class FXMLDataAnggotaController implements Initializable {
     private void hapusklik(ActionEvent event) {
          AnggotaModel s= new AnggotaModel();       
         s=tbvanggota.getSelectionModel().getSelectedItem();
-        Alert a=new Alert(Alert.AlertType.CONFIRMATION,"Mau dihapus?",ButtonType.YES,ButtonType.NO);
+        Alert a=new Alert(Alert.AlertType.CONFIRMATION,"Apakah anda yakin?",ButtonType.YES,ButtonType.NO);
         a.showAndWait();
         if(a.getResult()==ButtonType.YES){
            if(FXMLDocumentController.dtanggota.delete(s.getIdanggota())){

@@ -66,22 +66,22 @@ public void showdata(){
             tbvkembali.getColumns().clear();            
             tbvkembali.getItems().clear();
             TableColumn
-            col=new TableColumn("idkembali");
+            col=new TableColumn("ID Kembali");
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("idkembali"));
             tbvkembali.getColumns().addAll(col);
-            col=new TableColumn("idpinjam");
+            col=new TableColumn("ID Pinjam");
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("idpinjam"));
             tbvkembali.getColumns().addAll(col);
-            col=new TableColumn("tgl_kembalibuku");
+            col=new TableColumn("tanggal Kembali Buku");
             col.setCellValueFactory(new FormattedDateValueFactory<BukuModel>("tgl_kembalibuku", "dd-MMM-yyyy"));
             tbvkembali.getColumns().addAll(col);
-            col=new TableColumn("idbuku");
+            col=new TableColumn("ID Buku");
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("idbuku"));
             tbvkembali.getColumns().addAll(col);
-            col=new TableColumn("judul");
+            col=new TableColumn("Judul");
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("judul"));
             tbvkembali.getColumns().addAll(col);
-            col=new TableColumn("idanggota");
+            col=new TableColumn("ID Anggota");
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("idanggota"));
             tbvkembali.getColumns().addAll(col);
                    
@@ -176,22 +176,22 @@ public void showdata(){
             tbvkembali.getColumns().clear();            
             tbvkembali.getItems().clear();
             TableColumn
-            col=new TableColumn("idkembali");
+            col=new TableColumn("ID Kembali");
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("idkembali"));
             tbvkembali.getColumns().addAll(col);
-            col=new TableColumn("idpinjam");
+            col=new TableColumn("ID Pinjam");
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("idpinjam"));
             tbvkembali.getColumns().addAll(col);
-            col=new TableColumn("tgl_kembalibuku");
+            col=new TableColumn("tanggal Kembali Buku");
             col.setCellValueFactory(new FormattedDateValueFactory<BukuModel>("tgl_kembalibuku", "dd-MMM-yyyy"));
             tbvkembali.getColumns().addAll(col);
-            col=new TableColumn("idbuku");
+            col=new TableColumn("ID Buku");
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("idbuku"));
             tbvkembali.getColumns().addAll(col);
-            col=new TableColumn("judul");
+            col=new TableColumn("Judul");
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("judul"));
             tbvkembali.getColumns().addAll(col);
-            col=new TableColumn("idanggota");
+            col=new TableColumn("ID Anggota");
             col.setCellValueFactory(new PropertyValueFactory<KembaliModel, String>("idanggota"));
             tbvkembali.getColumns().addAll(col);   
             

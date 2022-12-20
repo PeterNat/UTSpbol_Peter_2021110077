@@ -61,22 +61,22 @@ public class FXMLDataBukuController implements Initializable {
         if(data!=null){            
             tbvbuku.getColumns().clear();            
             tbvbuku.getItems().clear();
-            TableColumn col=new TableColumn("idbuku");
+            TableColumn col=new TableColumn("ID Buku");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("idbuku"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("judul");
+            col=new TableColumn("Judul");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("judul"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("kategori");
+            col=new TableColumn("Kategori");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("kategori"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("pengarang");
+            col=new TableColumn("Pengarang");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("pengarang"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("penerbit");
+            col=new TableColumn("Penerbit");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("penerbit"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("tahun");
+            col=new TableColumn("Tahun");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, Integer>("tahun"));
             tbvbuku.getColumns().addAll(col);
                    
@@ -145,7 +145,7 @@ public class FXMLDataBukuController implements Initializable {
     private void hapusklik(ActionEvent event) {
         BukuModel s= new BukuModel();       
         s=tbvbuku.getSelectionModel().getSelectedItem();
-        Alert a=new Alert(Alert.AlertType.CONFIRMATION,"Mau dihapus?",ButtonType.YES,ButtonType.NO);
+        Alert a=new Alert(Alert.AlertType.CONFIRMATION,"Apakah anda yakin?",ButtonType.YES,ButtonType.NO);
         a.showAndWait();
         if(a.getResult()==ButtonType.YES){
            if(FXMLDocumentController.dtbuku.delete(s.getIdbuku())){
@@ -173,22 +173,22 @@ public class FXMLDataBukuController implements Initializable {
         if(data!=null){            
             tbvbuku.getColumns().clear();
             tbvbuku.getItems().clear();
-            TableColumn col=new TableColumn("idbuku");
+            TableColumn col=new TableColumn("ID Buku");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("idbuku"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("judul");
+            col=new TableColumn("Judul");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("judul"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("kategori");
+            col=new TableColumn("Kategori");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("kategori"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("pengarang");
+            col=new TableColumn("Pengarang");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("pengarang"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("penerbit");
+            col=new TableColumn("Penerbit");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("penerbit"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("tahun");
+            col=new TableColumn("Tahun");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, Integer>("tahun"));
             tbvbuku.getColumns().addAll(col);      
             

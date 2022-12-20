@@ -92,16 +92,16 @@ public void showdataanggota(){
         if(data!=null){            
             tbvanggota.getColumns().clear();            
             tbvanggota.getItems().clear();
-            TableColumn col=new TableColumn("idanggota");
+            TableColumn col=new TableColumn("ID Anggota");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("idanggota"));
             tbvanggota.getColumns().addAll(col);
-            col=new TableColumn("nama");
+            col=new TableColumn("Nama");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("nama"));
             tbvanggota.getColumns().addAll(col);
-            col=new TableColumn("alamat");
+            col=new TableColumn("Alamat");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("alamat"));
             tbvanggota.getColumns().addAll(col);
-            col=new TableColumn("telepon");
+            col=new TableColumn("Telepon");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, Integer>("telepon"));
             tbvanggota.getColumns().addAll(col);
             
@@ -119,22 +119,22 @@ public void showdataanggota(){
         if(data!=null){            
             tbvbuku.getColumns().clear();            
             tbvbuku.getItems().clear();
-            TableColumn col=new TableColumn("idbuku");
+            TableColumn col=new TableColumn("ID buku");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("idbuku"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("judul");
+            col=new TableColumn("Judul");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("judul"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("kategori");
+            col=new TableColumn("Kategori");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("kategori"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("pengarang");
+            col=new TableColumn("Pengarang");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("pengarang"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("penerbit");
+            col=new TableColumn("Penerbit");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("penerbit"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("tahun");
+            col=new TableColumn("Tahun");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, Integer>("tahun"));
             tbvbuku.getColumns().addAll(col);
                    
@@ -164,16 +164,16 @@ public void showdataanggota(){
         if(data!=null){            
             tbvanggota.getColumns().clear();
             tbvanggota.getItems().clear();
-            TableColumn col=new TableColumn("id Anggota");
+            TableColumn col=new TableColumn("ID Anggota");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("idanggota"));
             tbvanggota.getColumns().addAll(col);
-            col=new TableColumn("nama");
+            col=new TableColumn("Nama");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("nama"));
             tbvanggota.getColumns().addAll(col);
-            col=new TableColumn("alamat");
+            col=new TableColumn("Alamat");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("alamat"));
             tbvanggota.getColumns().addAll(col);
-            col=new TableColumn("telepon");
+            col=new TableColumn("Telepon");
             col.setCellValueFactory(new PropertyValueFactory<AnggotaModel, String>("telepon"));
             tbvanggota.getColumns().addAll(col);       
             
@@ -197,22 +197,22 @@ public void showdataanggota(){
         if(data!=null){            
             tbvbuku.getColumns().clear();
             tbvbuku.getItems().clear();
-            TableColumn col=new TableColumn("idbuku");
+            TableColumn col=new TableColumn("ID Buku");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("idbuku"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("judul");
+            col=new TableColumn("Judul");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("judul"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("kategori");
+            col=new TableColumn("Kategori");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("kategori"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("pengarang");
+            col=new TableColumn("Pengarang");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("pengarang"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("penerbit");
+            col=new TableColumn("Penerbit");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("penerbit"));
             tbvbuku.getColumns().addAll(col);
-            col=new TableColumn("tahun");
+            col=new TableColumn("Tahun");
             col.setCellValueFactory(new PropertyValueFactory<BukuModel, Integer>("tahun"));
             tbvbuku.getColumns().addAll(col);      
             

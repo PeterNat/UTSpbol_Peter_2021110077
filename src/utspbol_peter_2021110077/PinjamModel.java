@@ -21,6 +21,7 @@ public class PinjamModel {
         return tgl_kembali;
     }
 
+
     public void setTgl_kembali(Date tgl_kembali) {
         this.tgl_kembali = tgl_kembali;
     }
@@ -81,4 +82,7 @@ public class PinjamModel {
     public void setTgl_pinjam(Date tgl_pinjam) {
         this.tgl_pinjam = tgl_pinjam;
     }
+
+
+    
 }

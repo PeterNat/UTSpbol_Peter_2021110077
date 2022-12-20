@@ -43,13 +43,9 @@ public class FXMLDataPeminjamanController implements Initializable {
     @FXML
     private Button btntambah;
     @FXML
-    private Button btnakhir;
-    @FXML
     private Button btnsebelum;
     @FXML
     private Button btnsesudah;
-    @FXML
-    private Button btnawal;
     @FXML
     private TableView<PinjamModel> tbvpinjam;
 
@@ -81,7 +77,7 @@ public void showdata(){
             col.setCellValueFactory(new FormattedDateValueFactory<BukuModel>("tgl_pinjam", "dd-MMM-yyyy"));
             tbvpinjam.getColumns().addAll(col);
             col=new TableColumn("tgl_kembali");
-            col.setCellValueFactory(new PropertyValueFactory<BukuModel, String>("tgl_kembali"));
+            col.setCellValueFactory(new FormattedDateValueFactory<BukuModel>("tgl_kembali", "dd-MMM-yyyy"));
             tbvpinjam.getColumns().addAll(col);
                    
             tbvpinjam.setItems(data);

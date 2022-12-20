@@ -8,6 +8,7 @@ import java.net.URL;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -58,6 +60,8 @@ boolean editdata=false;
     private DatePicker datepinjam;
     @FXML
     private DatePicker datekembali;
+    @FXML
+    private DatePicker datekembalibuku;
 
     /**
      * Initializes the controller class.
@@ -248,7 +252,7 @@ public void showdataanggota(){
         n.setIdpinjam(txtidpinjam.getText());
         n.setIdanggota(txtidanggota.getText());
         n.setIdbuku(txtidbuku.getText());
-        n.setJudul(txtjudul.getText());     
+        n.setJudul(txtjudul.getText());      
         n.setTgl_pinjam(Date.valueOf(datepinjam.getValue()));  
         n.setTgl_kembali(Date.valueOf(datekembali.getValue())); 
         

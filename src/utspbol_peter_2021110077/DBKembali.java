@@ -57,7 +57,7 @@ public class DBKembali {
             Koneksi con = new Koneksi();            
             con.bukaKoneksi();
             con.statement = con.dbKoneksi.createStatement();
-            ResultSet rs = con.statement.executeQuery(  "select count(*) as jml from pengembalian where idkembali = '" + nomor + "'");
+            ResultSet rs = con.statement.executeQuery(  "select count(*) as jml from pengembalian where idpinjam= '" + nomor + "'");
             while (rs.next()) {                
                 val = rs.getInt("jml");            
             }            

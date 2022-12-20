@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="372.0" fitWidth="578.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="file:/C:/Users/Administrator/Documents/NetBeansProjects/UTSpbol_Peter_2021110077/src/bg.png" />
+            <Image url="@../bg.png" />
          </image>
       </ImageView>
       <TextField fx:id="searchanggota" layoutX="368.0" layoutY="43.0" onKeyReleased="#cariData" prefHeight="25.0" prefWidth="98.0" />

@@ -38,7 +38,7 @@ public class DBPinjam {
                 d.setIdbuku(rs.getString("idbuku"));            
                 d.setJudul(rs.getString("judul"));            
                 d.setTgl_pinjam(rs.getDate("tgl_pinjam"));            
-                d.setTgl_kembali(rs.getDate("tgl_kembali"));               
+                d.setTgl_kembali(rs.getDate("tgl_kembali"));                    
                 tableData.add(d);                
                 i++;            
             }
@@ -77,8 +77,9 @@ public class DBPinjam {
             con.preparedStatement.setString(2, getPinjamModel().getIdanggota());
             con.preparedStatement.setString(3, getPinjamModel().getIdbuku());           
             con.preparedStatement.setString(4, getPinjamModel().getJudul());        
+                  
             con.preparedStatement.setDate(5, getPinjamModel().getTgl_pinjam());        
-            con.preparedStatement.setDate(6, getPinjamModel().getTgl_kembali());        
+            con.preparedStatement.setDate(6, getPinjamModel().getTgl_kembali());   
             con.preparedStatement.executeUpdate();
             berhasil = true;
         } catch (Exception e) {            

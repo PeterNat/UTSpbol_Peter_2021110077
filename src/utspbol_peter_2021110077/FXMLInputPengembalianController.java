@@ -129,7 +129,7 @@ boolean editdata=false;
                 Alert a=new Alert(Alert.AlertType.ERROR,"Data gagal diubah",ButtonType.OK);
                 a.showAndWait(); 
             }
-            }else if(FXMLDocumentController.dtkembali.validasi(n.getIdkembali())<=0){
+            }else if(FXMLDocumentController.dtkembali.validasi(n.getIdpinjam())<=0){
             if(FXMLDocumentController.dtkembali.insert()){
                Alert a=new Alert(Alert.AlertType.INFORMATION,"Data berhasil disimpan",ButtonType.OK);
                a.showAndWait();            

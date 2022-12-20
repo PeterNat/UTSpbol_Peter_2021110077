@@ -75,7 +75,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="btnquit" layoutX="518.0" layoutY="194.0" mnemonicParsing="false" onAction="#quitklik" text="Exit">
+      <Button fx:id="btnquit" layoutX="517.0" layoutY="200.0" mnemonicParsing="false" onAction="#quitklik" text="Exit">
          <graphic>
             <ImageView fitHeight="16.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
